@@ -14,6 +14,8 @@
 		DA5D06C31CA54EAD004A03E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5D06C11CA54EAD004A03E3 /* Main.storyboard */; };
 		DA5D06C51CA54EAD004A03E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5D06C41CA54EAD004A03E3 /* Assets.xcassets */; };
 		DA5D06C81CA54EAD004A03E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5D06C61CA54EAD004A03E3 /* LaunchScreen.storyboard */; };
+		DA5D06D21CA55840004A03E3 /* BusquedaISBNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D06D11CA55840004A03E3 /* BusquedaISBNViewController.swift */; };
+		DA5D06D41CA56660004A03E3 /* Modelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D06D31CA56660004A03E3 /* Modelo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		DA5D06C41CA54EAD004A03E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA5D06C71CA54EAD004A03E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA5D06C91CA54EAD004A03E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA5D06D11CA55840004A03E3 /* BusquedaISBNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusquedaISBNViewController.swift; sourceTree = "<group>"; };
+		DA5D06D31CA56660004A03E3 /* Modelo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modelo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		DA5D06B71CA54EAD004A03E3 /* OpenlibraryApp */ = {
 			isa = PBXGroup;
 			children = (
+				DA5D06D31CA56660004A03E3 /* Modelo.swift */,
 				DA5D06B81CA54EAD004A03E3 /* AppDelegate.swift */,
 				DA5D06BD1CA54EAD004A03E3 /* MasterViewController.swift */,
 				DA5D06BF1CA54EAD004A03E3 /* DetailViewController.swift */,
@@ -66,6 +71,7 @@
 				DA5D06C61CA54EAD004A03E3 /* LaunchScreen.storyboard */,
 				DA5D06C91CA54EAD004A03E3 /* Info.plist */,
 				DA5D06BA1CA54EAD004A03E3 /* OpenlibraryApp.xcdatamodeld */,
+				DA5D06D11CA55840004A03E3 /* BusquedaISBNViewController.swift */,
 			);
 			path = OpenlibraryApp;
 			sourceTree = "<group>";
@@ -142,7 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5D06B91CA54EAD004A03E3 /* AppDelegate.swift in Sources */,
+				DA5D06D21CA55840004A03E3 /* BusquedaISBNViewController.swift in Sources */,
 				DA5D06BC1CA54EAD004A03E3 /* OpenlibraryApp.xcdatamodeld in Sources */,
+				DA5D06D41CA56660004A03E3 /* Modelo.swift in Sources */,
 				DA5D06BE1CA54EAD004A03E3 /* MasterViewController.swift in Sources */,
 				DA5D06C01CA54EAD004A03E3 /* DetailViewController.swift in Sources */,
 			);
