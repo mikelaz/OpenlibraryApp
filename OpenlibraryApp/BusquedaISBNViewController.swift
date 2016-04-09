@@ -31,6 +31,8 @@ class BusquedaISBNViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    /*
+    //Función para configuración de la caja de texto de búsqueda por medio de código
     func configurarTextField (){
         entradaTexto.placeholder = NSLocalizedString("Introduzca ISBN a buscar", comment: "")
         entradaTexto.returnKeyType = .Search
@@ -39,6 +41,7 @@ class BusquedaISBNViewController: UIViewController, UITextFieldDelegate {
         entradaTexto.spellCheckingType = .No
         entradaTexto.autocorrectionType = .No
     }
+    */
     
     func lanzarAlerta(titulo: String, mensaje: String){
         // Initialize Alert Controller
@@ -71,7 +74,7 @@ class BusquedaISBNViewController: UIViewController, UITextFieldDelegate {
             }else if resultado == 0 {
                 self.tituloLibro.text=libro.titulo
                 //Borramos el contenido del cuadro de texto
-                self.autoresLibro.text=""
+                self.autoresLibro.text = nil
                 //Recorremos el array de autores y lo imprimimos con un salto de línea por cada autor
                 for i in 0..<libro.autores.count{
                     self.autoresLibro.text = libro.autores[i] + "\r\n" + self.autoresLibro.text!
@@ -81,16 +84,15 @@ class BusquedaISBNViewController: UIViewController, UITextFieldDelegate {
                 //convertimos el objeto NSData descargado en objeto UIImage y se lo entregamos al contenedor Image View
                 self.portadaLibro.image = UIImage(data: imagen!)
                 self.portadaLibro.sizeToFit()
-                //Hacemos visible el contenedor si es que estaba oculto
-                self.portadaLibro.hidden = false
             }else if resultado == 1{
                 self.tituloLibro.text=libro.titulo
-                self.autoresLibro.text=""
+                self.autoresLibro.text = nil
                 for i in 0..<libro.autores.count{
                     self.autoresLibro.text = libro.autores[i] + "\r\n" + self.autoresLibro.text!
                 }
-                //ocultamos el contenedor Image View en este caso ya que no existe portada
-                self.portadaLibro.hidden = true
+                //Utilizamos la imagen "sinPortada" almacenada en el Asset en caso de que no disponga de portada
+                self.portadaLibro.image = UIImage(named: "sinPortada")
+                self.portadaLibro.sizeToFit()
             }
         }
         //ocultar teclado tras pulsar Search

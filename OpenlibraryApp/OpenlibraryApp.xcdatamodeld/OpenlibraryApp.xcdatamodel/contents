@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Autores" syncable="YES">
+        <attribute name="nombreAutor" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="escribeLibro" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Libro" inverseName="tieneAutores" inverseEntity="Libro" syncable="YES"/>
     </entity>
+    <entity name="Libro" syncable="YES">
+        <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="portada" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tieneAutores" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Autores" inverseName="escribeLibro" inverseEntity="Autores" syncable="YES"/>
+    </entity>
+    <fetchRequest name="existeLibro" entity="Libro" predicateString="isbn == $isbnConsulta"/>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Autores" positionX="-11" positionY="270" width="128" height="73"/>
+        <element name="Libro" positionX="261" positionY="198" width="128" height="103"/>
     </elements>
 </model>
