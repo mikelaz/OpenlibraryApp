@@ -81,7 +81,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let context = self.fetchedResultsController.managedObjectContext
         let entity = self.fetchedResultsController.fetchRequest.entity!
         let librosEntidad = NSEntityDescription.entityForName(entity.name!, inManagedObjectContext: context)
-        print(entity.name!)
+        //print(entity.name!)
         let consulta = librosEntidad?.managedObjectModel.fetchRequestFromTemplateWithName("existeLibro", substitutionVariables: ["isbnConsulta":isbnAComprobar])
         do{
             let resultadoConsulta = try self.managedObjectContext?.executeFetchRequest(consulta!)
